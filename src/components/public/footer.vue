@@ -2,7 +2,7 @@
   <div class="index">
 
     <footer>
-      <router-link to="http://www.baidu.com/">baidu</router-link>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam dicta dolor, dolore esse eveniet hic itaque laudantium maiores minima nobis officiis pariatur quasi, quisquam ratione soluta ullam, ut vitae voluptatem?
     </footer>
   </div>
 </template>
@@ -24,10 +24,11 @@ export default {
   height: 20px;
   background: #2c3e50;
 }
-section{
+footer{
   width: 1080px;
   margin: 0 auto;
+  padding: 30px 0;
+  box-sizing: border-box;
   text-align: left;
-  border: 1px solid #e4393c;
 }
 </style>
