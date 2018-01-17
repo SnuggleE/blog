@@ -8,15 +8,17 @@
         @select="handleSelect"
         background-color="#409eff"
         text-color="#fff"
+        :router="true"
         active-text-color="#ffd04b">
-        <el-menu-item index="1">主页</el-menu-item>
+        <el-menu-item index="/">
+          主页
+        </el-menu-item>
         <el-submenu index="2">
           <template slot="title">博客分类</template>
-          <el-menu-item v-for="item in categories" :key="item.index" :index="'2-'+item.index">{{item.name}}</el-menu-item>
-
+          <el-menu-item v-for="item in categories" :key="item.index" :index="item.index">{{item.name}}</el-menu-item>
         </el-submenu>
-        <el-menu-item index="3">我喜欢的</el-menu-item>
-        <el-menu-item index="4">关于我啊</el-menu-item>
+        <el-menu-item index="favor">我喜欢的</el-menu-item>
+        <el-menu-item index="about">关于我啊</el-menu-item>
       </el-menu>
     </header>
   </div>

@@ -1,12 +1,22 @@
 <template>
   <div class="index">
-    category
+    <page-header></page-header>
+    <div class="body">
+      category
+    </div>
+    <page-footer></page-footer>
   </div>
 </template>
 
 <script>
+  import pageHeader from './public/header'
+  import pageFooter from './public/footer'
 export default {
   name: 'category',
+  components:{
+    'page-header':pageHeader,
+    'page-footer':pageFooter
+  },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'

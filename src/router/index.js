@@ -4,6 +4,8 @@ import index from '@/components/index'
 import edit from '@/components/edit'
 import detail from '@/components/detail'
 import category from '@/components/category'
+import about from '@/components/about'
+import favor from '@/components/favorite'
 
 Vue.use(Router)
 
@@ -29,6 +31,16 @@ export default new Router({
       path: '/edit/:blogId',
       name: 'edit',
       component: edit
+    },
+    {
+      path: '/favor',
+      name: 'favor',
+      component: favor
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: about
     },
   ]
 })
