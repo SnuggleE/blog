@@ -1,12 +1,17 @@
 <template>
   <div class="index">
-    喵帕斯
+    <page-header></page-header>
+    <h3>喵帕斯</h3>
   </div>
 </template>
 
 <script>
+  import pageHeader from './public/header'
 export default {
   name: 'favor',
+  components:{
+    'page-header':pageHeader
+  },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'

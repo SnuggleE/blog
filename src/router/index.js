@@ -13,7 +13,11 @@ export default new Router({
   mode:'history',
   routes: [
     {
-      path: '/',
+      path:'/',
+      redirect:'/index'
+    },
+    {
+      path: '/index',
       name: 'index',
       component: index
     },
