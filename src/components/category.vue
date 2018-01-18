@@ -1,29 +1,25 @@
 <template>
   <div class="index">
-    <page-header></page-header>
     <div class="body">
-      category
+      categoryId:{{categoryId}}
     </div>
-    <page-footer></page-footer>
   </div>
 </template>
 
 <script>
-  import pageHeader from './public/header'
-  import pageFooter from './public/footer'
+
 export default {
   name: 'category',
-  components:{
-    'page-header':pageHeader,
-    'page-footer':pageFooter
-  },
+
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      categoryId:''
     }
   },
   created(){
-    console.log(this.$route)
+    this.categoryId=this.$route.params.categoryId
+    console.log(this.$route.params.categoryId)
   }
 }
 </script>

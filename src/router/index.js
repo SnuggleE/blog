@@ -6,6 +6,7 @@ import detail from '@/components/detail'
 import category from '@/components/category'
 import about from '@/components/about'
 import favor from '@/components/favorite'
+import pageMain from '@/components/main'
 
 Vue.use(Router)
 
@@ -14,37 +15,40 @@ export default new Router({
   routes: [
     {
       path:'/',
-      redirect:'/index'
+      component:pageMain,
+      children:[
+        {
+          path: '/',
+          name: 'index',
+          component: index
+        },
+        {
+          path: '/detail/:blogId',
+          name: 'detail',
+          component: detail
+        },
+        {
+          path: '/category/:categoryId',
+          name: 'category',
+          component: category
+        },
+        {
+          path: '/edit/:blogId',
+          name: 'edit',
+          component: edit
+        },
+        {
+          path: '/favor',
+          name: 'favor',
+          component: favor
+        },
+        {
+          path: '/about',
+          name: 'about',
+          component: about
+        },
+      ]
     },
-    {
-      path: '/index',
-      name: 'index',
-      component: index
-    },
-    {
-      path: '/detail/:blogId',
-      name: 'detail',
-      component: detail
-    },
-    {
-      path: '/category/:categoryId',
-      name: 'category',
-      component: category
-    },
-    {
-      path: '/edit/:blogId',
-      name: 'edit',
-      component: edit
-    },
-    {
-      path: '/favor',
-      name: 'favor',
-      component: favor
-    },
-    {
-      path: '/about',
-      name: 'about',
-      component: about
-    },
+
   ]
 })

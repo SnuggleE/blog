@@ -1,6 +1,6 @@
 <template>
   <div class="index">
-    <page-header></page-header>
+
     <div class="body">
       <section class="title-des">
         欢迎你来到这里，我们都是独一无二的。
@@ -8,29 +8,63 @@
       <section class="asy-des">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad delectus dolor dolore enim hic ipsa nostrum nulla veritatis. Ad, aliquam atque corporis cumque id labore quos saepe temporibus veritatis voluptatum.
       </section>
-      <section>
+      <section class="article-category">
         <el-row>
-          <el-col :span="24">
-            <el-table
-              :data="tableData"
-              style="width: 100%">
-              <el-table-column
-                prop="date"
-                align="left"
-                label="日期"
-                width="180">
-              </el-table-column>
-              <el-table-column
-                prop="address"
-                align="left"
-                label="地址">
-              </el-table-column>
-            </el-table>
+          <el-col :span="6">
+            <div class="aside">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam culpa dignissimos dolorum eligendi enim hic impedit inventore ipsam labore minima minus officiis, quia quo reiciendis sapiente tempore ut veritatis!
+            </div>
+          </el-col>
+          <el-col :span="18">
+            <div class="article-list">
+              <el-table
+                :data="tableData"
+                style="width: 100%">
+                <el-table-column
+                  prop="date"
+                  align="left"
+                  label="日期"
+                  width="180">
+                </el-table-column>
+                <el-table-column
+                  prop="address"
+                  align="left"
+                  label="地址">
+                </el-table-column>
+              </el-table>
+            </div>
+          </el-col>
+        </el-row>
+      </section>
+      <section class="article-category">
+        <el-row>
+          <el-col :span="6">
+            <div class="aside">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus aperiam culpa dignissimos dolorum eligendi enim hic impedit inventore ipsam labore minima minus officiis, quia quo reiciendis sapiente tempore ut veritatis!
+            </div>
+          </el-col>
+          <el-col :span="18">
+            <div class="article-list">
+              <el-table
+                :data="tableData"
+                style="width: 100%">
+                <el-table-column
+                  prop="date"
+                  align="left"
+                  label="日期"
+                  width="180">
+                </el-table-column>
+                <el-table-column
+                  prop="address"
+                  align="left"
+                  label="地址">
+                </el-table-column>
+              </el-table>
+            </div>
           </el-col>
         </el-row>
       </section>
     </div>
-    <page-footer></page-footer>
   </div>
 </template>
 
@@ -93,5 +127,17 @@
   div.body {
     width: 1080px;
     margin: 0 auto;
+  }
+  section.article-category{
+    padding: 20px 5px;
+  }
+  section.article-category .aside{
+
+    padding: 20px;
+    height: 100%;
+  }
+  section.article-category div.article-list{
+    padding: 5px 20px;
+    border-left: 2px solid #ddd;
   }
 </style>

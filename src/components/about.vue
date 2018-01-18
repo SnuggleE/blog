@@ -1,6 +1,9 @@
 detail.vue<template>
   <div class="index">
     我是谁？
+    <div>
+      <router-link :to="{path:'/index'}">返回</router-link>
+    </div>
   </div>
 </template>
 

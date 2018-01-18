@@ -1,6 +1,5 @@
 <template>
   <div class="index">
-    <page-header></page-header>
     <h3>喵帕斯</h3>
   </div>
 </template>

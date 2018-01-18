@@ -10,7 +10,7 @@
         text-color="#fff"
         :router="true"
         active-text-color="#ffd04b">
-        <el-menu-item index="/index">
+        <el-menu-item index="/">
           主页
         </el-menu-item>
         <el-submenu index="/category">
